@@ -7,6 +7,10 @@ html {
 *::after {
   box-sizing: inherit;
 }
+img {
+
+  height: auto;
+}
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -17,4 +21,44 @@ body {
    * CSS image reference example.
    */
   background-image: url('./images/bg-pattern.png');
+  
+}
+.js-container {
+  width: 900px;
+  height: auto;
+  text-align: center;
+ }
+
+.js-country-list_item-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  
+  
+}
+.js-countries-list_item, .js-country-list_item {  
+   list-style: none;  
+}
+
+.js-country_name {
+  font-size: 36px;
+  text-align: center;
+}
+p, span, h2 {
+  margin-right:  20px;
+}
+
+.js-country-list_item-textcontainer{
+  font-size: 22px;
+  text-align: left;
+}
+
+a{
+  text-decoration: none;
+}
+.js-container {
+  margin: 0 auto;
+}
+
+input{
+  font-size: 30px;
 }
