@@ -12,16 +12,17 @@ const debounce = require('lodash.debounce');
 ref.input.addEventListener('input', debounce(getInputQuery, 500))
 
 function getInputQuery() {
-    const searchCountry = ref.input.value.trim()
-    ref.countriesList.innerHTML = ""
-    if (!searchCountry) return;    
-    fetchCountries(searchCountry).then(data => {
-      if (data.length > 10) {
-        return alert({title:'Too many matches found. Please enter a more specific query!'})
-      }else if(data.length > 1 && data.length < 11){
-        makeManyCountriesMarkup(data)       
-      } else{
-        makeOneCountryMarkup(data)
-      }
-    }).catch(error => console.log(error))
-  }
+  const searchCountry = ref.input.value.trim()
+  ref.countriesList.innerHTML = ""
+  if (!searchCountry) return;    
+  fetchCountries(searchCountry).then(data => {
+    if (!data.length) return alert({title:'No country matches were found. Please try agan!'});
+    if (data.length > 10) return alert({title:'Too many matches found. Please enter a more specific query!'});
+    if(data.length > 1 && data.length < 11) makeManyCountriesMarkup(data);       
+    else makeOneCountryMarkup(data)    
+  }).catch(error => console.log(error))
+}
+
+
+
+

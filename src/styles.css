@@ -29,6 +29,10 @@ body {
   text-align: center;
  }
 
+ .js-input-query {
+   margin-top: 30px;
+ }
+
 .js-country-list_item-container {
   display: flex;
   flex-wrap: wrap;
@@ -39,10 +43,21 @@ body {
    list-style: none;  
 }
 
+.js-countries_flag {
+  box-shadow: 0px 0px 10px 10px rgba(59, 59, 59, 0.2)
+}
+
 .js-country_name {
   font-size: 36px;
   text-align: center;
 }
+
+
+
+.js-countries_name{
+  text-align: left;
+}
+
 p, span, h2 {
   margin-right:  20px;
 }
